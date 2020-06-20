@@ -1,4 +1,8 @@
 #!/bin/bash
 
-docker build -t kafka-service:0.10 ../docker
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+cd $DIR/../docker
+
+docker build -t lh-helm/kafka-service:0.10 .
 
